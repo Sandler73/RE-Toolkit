@@ -1,0 +1,11 @@
+# Default owner for everything in the repository.
+*                       @Sandler73
+
+# Core orchestration and the safety-critical paths.
+/analyze-binaries.sh    @Sandler73
+/install-retoolkit.sh   @Sandler73
+/lib/                   @Sandler73
+
+# Security-relevant policy and process documents.
+/SECURITY.md            @Sandler73
+/.github/               @Sandler73

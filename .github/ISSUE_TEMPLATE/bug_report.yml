@@ -1,0 +1,118 @@
+name: Bug report
+description: Report incorrect behavior in the installer, driver, or an analysis stage.
+title: "[Bug]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for filing a report.
+
+        The most useful things you can provide are the exact command you ran and
+        the relevant stage log from the output directory. Please redact anything
+        sensitive before pasting.
+
+        Do not report security vulnerabilities here. Use the private advisory
+        channel linked on the issue chooser.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What went wrong, in one or two sentences.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component
+      description: Which part of RE-Toolkit is affected?
+      options:
+        - install-retoolkit.sh (installer)
+        - analyze-binaries.sh (driver)
+        - A specific analysis stage
+        - GhidraDump.py (Ghidra postscript)
+        - Report or visualization output
+        - Library module (lib/)
+        - Documentation
+        - Not sure
+    validations:
+      required: true
+
+  - type: input
+    id: stage
+    attributes:
+      label: Stage
+      description: If a specific stage is involved, name it (for example, 30-ghidra).
+      placeholder: "30-ghidra"
+
+  - type: textarea
+    id: command
+    attributes:
+      label: Command
+      description: The exact command you ran.
+      render: shell
+      placeholder: analyze-binaries.sh -t sample.exe -o ./out --dynamic
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: Include the error text if there was one.
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: |
+        From the output directory, the stage log under `90-logs/`, or from
+        `/var/log/retoolkit/` for installer problems. Redact sensitive paths.
+      render: shell
+
+  - type: input
+    id: version
+    attributes:
+      label: RE-Toolkit version
+      description: Output of `analyze-binaries.sh --version`.
+      placeholder: "3.7.3"
+    validations:
+      required: true
+
+  - type: input
+    id: distro
+    attributes:
+      label: Host distribution
+      placeholder: "Kali Rolling 2026.1 / Debian 12"
+    validations:
+      required: true
+
+  - type: input
+    id: target_type
+    attributes:
+      label: Target file type
+      description: Output of `file -b` on the target, if a target is involved.
+      placeholder: "PE32+ executable (console) x86-64, for MS Windows"
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues for a duplicate.
+          required: true
+        - label: I am running a supported version.
+          required: true
+        - label: I removed sensitive information from logs and paths.
+          required: true

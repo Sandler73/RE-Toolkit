@@ -1,0 +1,107 @@
+name: Tool integration
+description: Propose adding a new analysis tool to the toolkit.
+title: "[Tool]: "
+labels: ["enhancement", "tool-integration", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        RE-Toolkit integrates a large number of tools already. The bar for adding
+        another is that it provides a perspective the current set does not, and
+        that its output can be parsed into structured findings rather than only
+        written to a file.
+
+  - type: input
+    id: name
+    attributes:
+      label: Tool name
+    validations:
+      required: true
+
+  - type: input
+    id: url
+    attributes:
+      label: Upstream URL
+      description: The canonical repository or project page.
+    validations:
+      required: true
+
+  - type: input
+    id: license
+    attributes:
+      label: License
+      description: Required. Tools with incompatible or unclear licensing cannot be integrated.
+    validations:
+      required: true
+
+  - type: textarea
+    id: capability
+    attributes:
+      label: Capability
+      description: What does it do that the existing tool set does not?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: types
+    attributes:
+      label: Applicable target types
+      multiple: true
+      options:
+        - Native PE
+        - .NET PE
+        - ELF
+        - Mach-O
+        - WebAssembly
+        - Python bytecode
+        - Java archive
+        - PDF
+        - OLE or OOXML
+        - Android APK or DEX
+        - Any binary
+    validations:
+      required: true
+
+  - type: dropdown
+    id: install
+    attributes:
+      label: Installation method
+      options:
+        - Debian or Kali apt package
+        - Python package (pip)
+        - GitHub release artifact
+        - Source build
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: invocation
+    attributes:
+      label: Invocation
+      description: The command line that produces the deepest useful output.
+      render: shell
+    validations:
+      required: true
+
+  - type: textarea
+    id: output
+    attributes:
+      label: Output format
+      description: |
+        What does it emit, and can it be parsed into structured findings? A tool
+        that only produces unstructured text is harder to justify.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: considerations
+    attributes:
+      label: Considerations
+      options:
+        - label: The tool does not modify its input, or the destructive options can be avoided.
+          required: true
+        - label: The tool terminates predictably and can run under a timeout.
+          required: true
+        - label: The license permits redistribution and use in this context.
+          required: true

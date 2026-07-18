@@ -1,0 +1,61 @@
+name: Feature request
+description: Propose new functionality or an improvement to existing behavior.
+title: "[Feature]: "
+labels: ["enhancement", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Proposals that describe a concrete analysis gap are easiest to act on.
+        If you are proposing a new tool integration, please use the tool
+        integration template instead.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What analysis gap or workflow friction does this address?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - New analysis stage
+        - Existing stage improvement
+        - Installer
+        - Driver or CLI
+        - Summary or scoring model
+        - Report or visualization
+        - Documentation
+        - Testing or CI
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Including whether an existing option already achieves this.
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Sample types this applies to, references, or prior art.
+
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: Contribution
+      options:
+        - label: I am willing to submit a pull request for this.

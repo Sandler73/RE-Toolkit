@@ -1,0 +1,56 @@
+name: Documentation
+description: Report an error, gap, or ambiguity in the documentation.
+title: "[Docs]: "
+labels: ["documentation", "triage"]
+body:
+  - type: dropdown
+    id: location
+    attributes:
+      label: Location
+      options:
+        - README
+        - Wiki, Installation
+        - Wiki, Usage
+        - Wiki, Architecture and Design
+        - Wiki, Stage Reference
+        - Wiki, Configuration
+        - Wiki, Output and Reports
+        - Wiki, Dynamic Analysis
+        - Wiki, Security Model
+        - Wiki, Troubleshooting
+        - Wiki, FAQ
+        - Wiki, Development
+        - CONTRIBUTING
+        - SECURITY
+        - Code comments or header blocks
+    validations:
+      required: true
+
+  - type: input
+    id: section
+    attributes:
+      label: Section or heading
+    validations:
+      required: true
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Issue type
+      options:
+        - Factually incorrect
+        - Missing information
+        - Ambiguous or confusing
+        - Out of date
+        - Broken link or reference
+        - Typo or formatting
+    validations:
+      required: true
+
+  - type: textarea
+    id: detail
+    attributes:
+      label: Detail
+      description: What the documentation says now, and what it should say.
+    validations:
+      required: true
