@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2026 Ryan
+Copyright (c) 2026 Sandler73 (RE-Toolkit contributors)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,3 +19,192 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+===============================================================================
+                          SUPPLEMENTAL TERMS AND NOTICES
+===============================================================================
+
+The following sections supplement the MIT License above. They do not restrict
+the rights granted by it. Where a term below is unenforceable in a given
+jurisdiction, it is severed and the remainder continues in force.
+
+-------------------------------------------------------------------------------
+1. AS-IS USE AND ASSUMPTION OF RISK
+-------------------------------------------------------------------------------
+
+The Software is provided AS IS and AS AVAILABLE, with all faults and defects,
+and without support, maintenance, updates, or corrections of any kind. No
+obligation is undertaken to provide any of the foregoing.
+
+You accept sole responsibility for deciding whether the Software is appropriate
+for your purpose, and you assume the entire risk of its use. This includes
+without limitation the risk of:
+
+  a. Executing, parsing, or otherwise processing hostile, malicious, or
+     malformed input, which the Software is expressly designed to do;
+
+  b. Compromise, corruption, instability, or loss of control of any system on
+     which the Software or any tool it provisions or invokes is run;
+
+  c. Escape, evasion, or failure of any sandbox, emulator, container, virtual
+     machine, or other isolation mechanism, whether provided by the Software,
+     by a tool it invokes, or by your own environment;
+
+  d. Loss, corruption, disclosure, exfiltration, or encryption of data,
+     credentials, keys, or other assets;
+
+  e. Interruption of business, loss of revenue, loss of goodwill, or any other
+     operational or commercial harm.
+
+The Software analyzes and, when explicitly enabled by the user, executes files
+that may be malicious. It is intended to be run in a disposable, isolated
+environment. Running it otherwise is done entirely at your own risk.
+
+-------------------------------------------------------------------------------
+2. NO WARRANTY
+-------------------------------------------------------------------------------
+
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, ALL WARRANTIES, CONDITIONS,
+REPRESENTATIONS, AND TERMS OF ANY KIND, WHETHER EXPRESS, IMPLIED, STATUTORY, OR
+ARISING FROM COURSE OF DEALING, COURSE OF PERFORMANCE, USAGE, OR TRADE PRACTICE,
+ARE HEREBY DISCLAIMED. THIS INCLUDES WITHOUT LIMITATION ANY WARRANTY OF:
+
+  a. MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, QUIET ENJOYMENT,
+     ACCURACY, OR NON-INFRINGEMENT;
+
+  b. UNINTERRUPTED, TIMELY, SECURE, OR ERROR-FREE OPERATION;
+
+  c. CORRECTNESS, COMPLETENESS, OR RELIABILITY OF ANY ANALYSIS RESULT, VERDICT,
+     SEVERITY SCORE, INDICATOR, SIGNATURE MATCH, CLASSIFICATION, DECOMPILATION,
+     DISASSEMBLY, OR REPORT PRODUCED BY THE SOFTWARE;
+
+  d. DETECTION OF ANY PARTICULAR THREAT, OR ABSENCE OF FALSE POSITIVES OR FALSE
+     NEGATIVES;
+
+  e. CONTAINMENT, ISOLATION, OR SAFE HANDLING OF ANY SAMPLE OR INPUT;
+
+  f. FITNESS FOR ANY REGULATORY, COMPLIANCE, EVIDENTIARY, FORENSIC, LEGAL, OR
+     CERTIFICATION PURPOSE.
+
+No advice or information, whether oral or written, obtained from the authors,
+copyright holders, contributors, or from the Software or its documentation,
+creates any warranty not expressly stated here.
+
+The Software is a triage and analysis aid. It is not a substitute for
+independent professional judgment, and its output must not be treated as
+authoritative without verification.
+
+-------------------------------------------------------------------------------
+3. LIMITATION OF LIABILITY
+-------------------------------------------------------------------------------
+
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL THE
+AUTHORS, COPYRIGHT HOLDERS, OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+INCIDENTAL, SPECIAL, EXEMPLARY, PUNITIVE, OR CONSEQUENTIAL DAMAGES; NOR FOR ANY
+LOSS OF PROFITS, REVENUE, DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES;
+HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+LIABILITY, NEGLIGENCE, OR OTHER TORT, AND WHETHER OR NOT ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE, ARISING FROM OR RELATING TO:
+
+  a. The use of, inability to use, or reliance on the Software;
+
+  b. Any analysis result, verdict, score, or report the Software produces,
+     including any decision made or not made in reliance on it;
+
+  c. Any act or omission of any third-party tool, package, rule set, container
+     image, or dependency that the Software provisions, downloads, or invokes;
+
+  d. Any security incident, breach, infection, lateral movement, data loss, or
+     system compromise occurring on or from any system where the Software or
+     any sample under analysis was present;
+
+  e. Unauthorized access to, alteration of, or destruction of your systems,
+     transmissions, or data.
+
+THIS LIMITATION APPLIES EVEN IF ANY REMEDY IS FOUND TO HAVE FAILED OF ITS
+ESSENTIAL PURPOSE. WHERE LIABILITY CANNOT LAWFULLY BE EXCLUDED, IT IS LIMITED TO
+THE GREATER OF THE AMOUNT YOU PAID FOR THE SOFTWARE, WHICH IS ZERO, OR ONE US
+DOLLAR (USD 1.00).
+
+-------------------------------------------------------------------------------
+4. INDEMNIFICATION
+-------------------------------------------------------------------------------
+
+You agree to indemnify, defend, and hold harmless the authors, copyright
+holders, and contributors from and against any and all claims, demands, actions,
+proceedings, liabilities, damages, losses, judgments, settlements, fines,
+penalties, costs, and expenses, including reasonable legal fees, arising out of
+or relating to:
+
+  a. Your use, modification, distribution, or sublicensing of the Software;
+
+  b. Your use of the Software against any binary, file, system, network, or
+     service that you were not authorized to analyze, access, or test;
+
+  c. Your violation of any applicable law, regulation, export control, contract,
+     license term, or third-party right, including intellectual property rights
+     and terms prohibiting reverse engineering;
+
+  d. Your handling, storage, transmission, or disclosure of any malicious
+     sample, extracted artifact, or analysis output;
+
+  e. Your breach of these terms.
+
+This obligation survives termination and any cessation of your use of the
+Software.
+
+-------------------------------------------------------------------------------
+5. THIRD-PARTY SOFTWARE
+-------------------------------------------------------------------------------
+
+The MIT License above covers RE-Toolkit's own source: the installer, the analyzer
+driver, the library modules, the analysis stages, the Ghidra postscript, and the
+documentation in this repository.
+
+It does NOT cover the third-party tools that install-retoolkit.sh provisions or
+that analyze-binaries.sh invokes. Those remain under their own licenses, held by
+their own authors, and are neither redistributed nor relicensed by this project.
+RE-Toolkit orchestrates them; it does not vendor them.
+
+Tools are obtained at install time from their upstream distributors, whether a
+Debian or Kali package, a vendor release artifact, a container image, or a
+source build. No warranty is offered as to the provenance, integrity, safety,
+licensing, or behavior of any such artifact.
+
+Review the license of any tool before redistributing it or incorporating its
+output into a deliverable. Several carry terms materially different from MIT,
+including copyleft terms that attach obligations to derived work, and terms that
+restrict commercial or governmental use.
+
+Rule sets are likewise separately licensed. The capability and signature rules
+cloned during installation are the property of their respective projects and
+carry their own terms.
+
+Determining and satisfying your obligations under those licenses is your
+responsibility.
+
+-------------------------------------------------------------------------------
+6. DUAL-USE NOTICE AND AUTHORIZED USE
+-------------------------------------------------------------------------------
+
+RE-Toolkit is dual-use software. It installs and orchestrates tooling capable of
+analyzing, deobfuscating, and reverse engineering software, including software
+you did not author. When explicitly enabled, it executes untrusted binaries.
+
+It is intended for defensive security work: malware analysis, incident response,
+vulnerability research, software assurance, and assessment of systems you own or
+are authorized to assess.
+
+Reverse engineering may be restricted by license terms, by contract, or by law
+in your jurisdiction. Export, re-export, or transfer of security tooling may be
+subject to control. Determining what you are permitted to analyze, possess, and
+transfer is your responsibility, not this project's.
+
+Do not use RE-Toolkit against binaries, systems, networks, or services you lack
+documented authorization to examine.
+
+Nothing in the MIT grant above should be read as permission to conduct
+unauthorized access, evade defensive controls, infringe intellectual property,
+or violate applicable law. The grant is a copyright license only. It conveys no
+authorization, consent, or right of access with respect to any third party's
+software, systems, or data.
