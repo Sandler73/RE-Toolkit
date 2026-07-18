@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/images/RE-Toolkit-banner.png" alt="RE-Toolkit" width="50%" />
+</p>
+
 <div align="center">
 
 # RE-Toolkit
